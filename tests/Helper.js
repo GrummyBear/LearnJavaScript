@@ -1,8 +1,7 @@
 /**
- * Created by davem on 27/11/2016.
+ * Created by Graeme Smith on 19/12/2016.
  */
 var fixture;
-
 function loadFixture(path) {
     var html;
     $.ajax({
@@ -14,7 +13,6 @@ function loadFixture(path) {
     });
     return $.parseHTML(html);
 }
-
 function resetFixture() {
     if (!fixture) {
         var index = $('<div>').append(loadFixture('../index.html'));
@@ -25,7 +23,6 @@ function resetFixture() {
         $('.fixture').replaceWith(fixture.clone());
     }
 }
-
 beforeEach(function () {
     resetFixture();
 });
